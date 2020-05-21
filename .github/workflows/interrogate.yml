@@ -24,6 +24,7 @@ jobs:
       uses: JackMcKew/python-interrogate-check@master
       with:
         path: 'sample_package'
+        fail-under: '50'
         badge-location: 'badges/interrogate_badge.svg'
 
     - name: Commit files

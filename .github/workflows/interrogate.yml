@@ -22,6 +22,8 @@ jobs:
         python-version: 3.8
     - name: Python Interrogate Check
       uses: JackMcKew/python-interrogate-check@master
+      with:
+        path: 'sample_package'
 
     - name: Commit files
       run: |
@@ -29,7 +31,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add interrogate_badge.svg
         git commit -m "Update interrogate_badge.svg" -a
-        
+
     - name: Push changes
       if: success()
       uses: ad-m/github-push-action@master

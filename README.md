@@ -1,2 +1,4 @@
 # actions-test-playground
- For testing actions
+ For testing
+
+![Interrogate Badge](badges/interrogate_badge.svg)

@@ -24,3 +24,6 @@ var_2 = 20
 var_3 = 5
 
 print(test_function(var_1,var_2,var_3))
+
+def null_func():
+    return 0

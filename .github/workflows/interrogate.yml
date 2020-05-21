@@ -24,12 +24,13 @@ jobs:
       uses: JackMcKew/python-interrogate-check@master
       with:
         path: 'sample_package'
+        badge-location: 'badges/interrogate_badge.svg'
 
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add interrogate_badge.svg
+        git add badges/interrogate_badge.svg
         git commit -m "Update interrogate_badge.svg" -a
 
     - name: Push changes

@@ -1,4 +1,20 @@
+""" Example
+"""
+
 def test_function(a,b,c):
+    """
+    [summary]
+
+    [extended_summary]
+
+    Args:
+        a ([type]): [description]
+        b ([type]): [description]
+        c ([type]): [description]
+
+    Returns:
+        [type]: [description]
+    """
     return a + b - c
 
 var_1 = 15

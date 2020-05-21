@@ -1,3 +1,5 @@
+""" Example
+"""
 def test_function2(a,b,c):
     """
     [summary]

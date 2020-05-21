@@ -1,0 +1,7 @@
+attrs==19.3.0
+click==7.1.2
+colorama==0.4.3
+interrogate==1.2.0
+py==1.8.1
+tabulate==0.8.7
+toml==0.10.1

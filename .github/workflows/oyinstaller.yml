@@ -1,4 +1,4 @@
-name: Interrogate documentation
+name: Package exe with PyInstaller
 
 on:
   push:
@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: PyInstaller Windows
-      uses: JackMcKew/pyinstaller-action-windows@0.1.0a1
+      run: docker run -v "$(pwd):/src/" cdrx/pyinstaller-windows

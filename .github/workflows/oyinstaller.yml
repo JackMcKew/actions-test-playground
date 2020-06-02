@@ -14,4 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: PyInstaller Windows
+      run: echo "$(pwd):/src/"
+      run: echo "$PWD:/src/"
       run: docker run -v "$(pwd):/src/" cdrx/pyinstaller-windows

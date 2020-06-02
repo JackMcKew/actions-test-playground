@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: PyInstaller Windows
-      uses: JackMcKew/pyinstaller-action-windows@0.1.0a7
+      uses: JackMcKew/pyinstaller-action-windows@0.1.0a8
 
     - uses: actions/upload-artifact@v2
       with:

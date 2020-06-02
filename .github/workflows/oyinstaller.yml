@@ -13,9 +13,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: print ec
-      run: echo "$(pwd):/src/"
-    - name: prince ec2
-      run: echo "$PWD:/src/"
     - name: PyInstaller Windows
-      run: docker run -v "$(pwd):/src/" cdrx/pyinstaller-windows
+      run: docker run -v "$(pwd)/src:/src/" cdrx/pyinstaller-windows

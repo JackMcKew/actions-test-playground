@@ -11,8 +11,8 @@ jobs:
 
       - name: Install dependencies & Convert README
         run: |
-          npm -g install reveal-md --unsafe-perm
-          reveal-md example.md --static _site
+          sudo npm install -g reveal-md --unsafe-perm
+          sudo reveal-md example.md --static _site
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3

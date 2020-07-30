@@ -11,7 +11,7 @@ jobs:
 
       - name: Install dependencies & Convert README
         run: |
-          RUN npm -g install reveal-md --unsafe-perm
+          npm -g install reveal-md --unsafe-perm
           reveal-md example.md --static _site
 
       - name: Deploy 🚀

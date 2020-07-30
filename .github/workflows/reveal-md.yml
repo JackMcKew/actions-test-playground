@@ -1,4 +1,4 @@
-name: Build & Publish Presentation wit reveal-md
+name: Build & Publish Presentation with reveal-md
 
 on: push
 
@@ -11,7 +11,7 @@ jobs:
 
       - name: Install dependencies & Convert README
         run: |
-          npm install -g reveal-md
+          npm install reveal-md
           reveal-md example.md --static _site
 
       - name: Deploy 🚀

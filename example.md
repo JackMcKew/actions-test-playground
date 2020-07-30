@@ -14,7 +14,7 @@ Some text bla
 
 Some text bla bla
 
-![Sample Image](_site/img/sample_image.png)
+![Sample Image](img/sample_image.png)
 
 ---
 

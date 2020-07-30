@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">Title:   Presentation Title
+Author:  Deni Bertovic
+Date:    December 09, 2015
+Comment: Sample comment
+footer:  Sample Footer
+
+## Reveal JS
+
+Some text bla
+</script></section><section  data-markdown><script type="text/template">
+## A slide
+
+Some text bla bla
+
+![Sample Image](img/sample_image.png)
+</script></section><section  data-markdown><script type="text/template">
+## A slide below with a list
+
+- A thing
+- Another thing
+- Three things
+</script></section><section  data-markdown><script type="text/template">
+## Another slide
+
+* Bla
+* Bla
+</script></section><section  data-markdown><script type="text/template">
+## Slide with code
+
+```haskell
+
+import qualified Data.ByteString.Lazy.Char8 as L8
+import           Network.HTTP.Simple
+
+main :: IO ()
+main = do
+    response <- httpLBS "http://httpbin.org/get"
+
+    putStrLn $ "The status code was: " ++
+               show (getResponseStatusCode response)
+    print $ getResponseHeader "Content-Type" response
+    L8.putStrLn $ getResponseBody response
+```
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

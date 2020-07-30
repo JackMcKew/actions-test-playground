@@ -4,14 +4,14 @@ on: push
 
 jobs:
   release:
-    name: Build
+    name: Build & Publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
 
       - name: Install dependencies & Convert README
         run: |
-          npm install reveal-md
+          RUN npm -g install reveal-md --unsafe-perm
           reveal-md example.md --static _site
 
       - name: Deploy 🚀

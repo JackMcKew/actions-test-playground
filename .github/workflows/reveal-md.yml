@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Install dependencies & Convert README
+      - name: Install dependencies & Build Presentation
         run: |
           sudo npm install -g reveal-md --unsafe-perm
           sudo reveal-md example.md --static _site

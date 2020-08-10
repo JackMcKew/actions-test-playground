@@ -14,10 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: PyInstaller Windows
-      uses: JackMcKew/pyinstaller-action-windows@add-args
+      uses: JackMcKew/pyinstaller-action-linux@main
 
     - uses: actions/upload-artifact@v2
       with:
         name: my-exe
-        path: src/dist/windows # or path/to/artifact
+        path: src/dist/linux # or path/to/artifact
 
